@@ -9,3 +9,6 @@ ignore = version, help, update
 pager =
 progress =
 color =
+
+[alias]
+latest = log --limit 5
