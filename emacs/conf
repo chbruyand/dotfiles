@@ -22,7 +22,10 @@
 ;; (tool-bar-mode -1)
 ;; (scroll-bar-mode -1)
 
-(show-paren-mode)
+;; show parenthesis match
+(defvar show-paren-delay 0)
+(defvar show-paren-style 'expression)
+(show-paren-mode 1)
 
 (transient-mark-mode t)
 (setq search-highlight t)
@@ -276,11 +279,8 @@
 ;; ensure there is a new line at the end of the file
 (setq require-final-newline t)
 
-;; melpa
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
-(package-initialize)
+;; No startup screen
+(setq inhibit-startup-screen t)
+
+;; No cursor blinking
+(blink-cursor-mode 0)
