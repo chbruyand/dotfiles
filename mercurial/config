@@ -1,0 +1,11 @@
+[ui]
+username = Charles-Henri Bruyand <chbruyand@mayhem.fr>
+
+[pager]
+pager = LESS='FRX' less -x8
+ignore = version, help, update
+
+[extensions]
+pager =
+progress =
+color =
