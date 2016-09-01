@@ -1,1 +1,5 @@
+# misc
 alias wttr='curl -4 wttr.in/Paris'
+
+# docker
+alias docker-clean-containers='container_ids=$(docker ps -q -f status=exited) ; if [ ! -z ${container_ids} ] ; then docker rm ${container_ids} ; fi'
