@@ -1,5 +1,8 @@
 # misc
 alias wttr='curl -4 wttr.in/Paris'
+alias mdcat='pandoc -f markdown -t plain'
 
 # docker
-alias docker-clean-containers='container_ids=$(docker ps -q -f status=exited) ; if [ ! -z "${container_ids}" ] ; then docker rm ${container_ids} ; fi'
+alias docker-clean-containers='docker ps -q -f status=exited | docker rm'
+alias docker-stop-all='docker ps -a -q | xargs docker stop'
+alias docker-clean-images='docker images --quiet --filter "dangling=true" | xargs docker rmi'
