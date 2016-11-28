@@ -3,6 +3,6 @@ alias wttr='curl -4 wttr.in/Paris'
 alias mdcat='pandoc -f markdown -t plain'
 
 # docker
-alias docker-clean-containers='docker ps -q -f status=exited | docker rm'
+alias docker-clean-containers='docker ps -q -f status=exited | xargs docker rm'
 alias docker-stop-all='docker ps -a -q | xargs docker stop'
 alias docker-clean-images='docker images --quiet --filter "dangling=true" | xargs docker rmi'
