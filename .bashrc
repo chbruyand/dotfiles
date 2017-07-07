@@ -1,3 +1,10 @@
+# misc
+alias wttr='curl -4 wttr.in/Paris'
+alias mdcat='pandoc -f markdown -t plain'
+
+# docker
+alias docker-stop-all='docker ps -a -q | xargs docker stop'
+
 export EDITOR=/usr/bin/emacs
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

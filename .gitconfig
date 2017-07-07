@@ -1,11 +1,27 @@
 [user]
 	name = Charles-Henri Bruyand
         email = chbruyand@mayhem.fr
+	signingkey = EAE1BF07
+
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+
+[diff]
+	# Detect copies as well as renames
+  	 renames = copies
+
+[diff "bin"]
+	# Use `hexdump` to diff binary files
+	textconv = hexdump -v -C
 
 [core]
 	editor = emacs
         pager = less -x8
-	excludesfile = ~/.dotfiles/git/exclude
+	excludesfile = ~/.gitignore_global
 
 [alias]
 	ci = commit
@@ -27,3 +43,17 @@
 
 [branch]
         autosetuprebase = always
+
+[merge]
+	summary = true
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+
+[rebase]
+	autosquash = true
+
+[commit]
+	gpgsign = true
+
+[hub]
+	protocol = https
