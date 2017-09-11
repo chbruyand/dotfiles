@@ -232,11 +232,20 @@
   )
 
 (custom-set-variables
-	'(c-basic-offset 8)
-	'(c-default-style "bsd")
-
- '(mode-line-inverse-video nil))
-(custom-set-faces)
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(c-basic-offset 8)
+ '(c-default-style "bsd")
+ '(mode-line-inverse-video nil)
+ '(package-selected-packages (quote (go-mode rust-mode))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 (defun des-knf ()
   (interactive)
@@ -288,6 +297,6 @@
   (require 'package)
   (add-to-list
    'package-archives
-   '("melpa" . "http://melpa.org/packages/")
+   '("melpa" . "https://stable.melpa.org/packages/")
    t)
   (package-initialize))
