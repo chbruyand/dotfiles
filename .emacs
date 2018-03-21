@@ -197,36 +197,7 @@
 ; File association ;
 ;------------------;
   (setq auto-mode-alist
-        (append '(("\\.C$". c++-mode)
-		  ("\\.cc$". c++-mode)
-		  ("\\.hh$". c++-mode)
-		  ("\\.pov$". c++-mode)
-		  ("\\.inc$". c++-mode)
-		  ("\\.steprc$". fvwm-mode)
-		  (".letter". mail-mode)
-		  (".article". mail-mode)
-		  ("pico.". mail-mode)
-		  (".followup". mail-mode)
-		  ("rules". makefile-mode)
-		  ("\\.gnus$". emacs-lisp-mode)
-		  ("\\.rpm$". rpm-mode)
-		  ("\\.c$". c-mode)
-		  ("\\.py$". python-mode)
-		  ("\\.h$". c-mode)
-		  ("bashrc". shell-script-mode)
-		  (".bashrc". shell-script-mode)
-		  (".*zsh.*". shell-script-mode)
-		  ("\\.cfg$". tex-mode)
-		  ("\\.pro$". idl-mode)
-		  ("\\.spec$". rpm-spec-mode)
-		  ("\\.eps$". postscript-mode)
-		  ("\\.m\\'". math-mode)
-		  ("\\.Xdefaults$". xrdb-mode)
-		  ("\\.Xenvironment$". xrdb-mode)
-		  ("\\.Xresources$". xrdb-mode)
-		  ("*.\\.ad$". xrdb-mode)
-		  ("*.\\.s$". masd-mode)
-		  ("*.\\.php$". php-mode)
+        (append '(("\\.tex\\'" . latex-mode)
 		  )
 		      auto-mode-alist)
   )
@@ -236,10 +207,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(c-basic-offset 8)
+ '(c-basic-offset 4)
+ '(c-indent-level 4)
  '(c-default-style "bsd")
  '(mode-line-inverse-video nil)
- '(package-selected-packages (quote (go-mode rust-mode))))
+ '(package-selected-packages (quote (php-mode yaml-mode markdown-mode go-mode rust-mode)))
+ )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
