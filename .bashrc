@@ -1,5 +1,5 @@
 # misc
-alias wttr='curl -4 wttr.in/Paris'
+alias wttr='curl -4 wttr.in/Grenoble'
 alias mdcat='pandoc -f markdown -t plain'
 
 # docker
