@@ -1,6 +1,11 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 # misc
 alias wttr='curl -4 wttr.in/Grenoble'
 alias mdcat='pandoc -f markdown -t plain'
+alias emacs='emacs -nw'
+alias ls='ls --color=auto'
 
 # docker
 alias docker-stop-all='docker ps -a -q | xargs docker stop'
@@ -25,3 +30,11 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
+
+# Load bashrcs
+if test -d ~/.bashrc.d/; then
+	for bashrc in ~/.bashrc.d/*.sh; do
+		test -r "$bashrc" && . "$bashrc"
+	done
+	unset bashrc
+fi
