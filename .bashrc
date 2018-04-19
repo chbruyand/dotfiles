@@ -6,6 +6,7 @@ alias wttr='curl -4 wttr.in/Grenoble'
 alias mdcat='pandoc -f markdown -t plain'
 alias emacs='emacs -nw'
 alias ls='ls --color=auto'
+alias clean='find . -name "*~" -or -name "\#*\#" -delete'
 
 # docker
 alias docker-stop-all='docker ps -a -q | xargs docker stop'
