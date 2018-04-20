@@ -19,7 +19,7 @@
 	textconv = hexdump -v -C
 
 [core]
-	editor = emacs
+	editor = emacs -nw
         pager = less -x8
 	excludesfile = ~/.gitignore_global
 
