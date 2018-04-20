@@ -13,7 +13,7 @@ install: ## Install all the things
 
 install-dotfiles: ## Pull and Install dotfiles
 	@git pull -q # && git submodule update --init --recursive -q
-	@mkdir -m 0700 -p ~/.ssh ~/.gnupg
+	@mkdir -m 0700 -p ~/.ssh ~/.gnupg ~/.config/kitty
 	@which stow >/dev/null || { echo 'CAN I HAZ STOW ?'; exit 1; }
 	@stow -S . -t "$(HOME)" -v \
 		--ignore='README.md' \
