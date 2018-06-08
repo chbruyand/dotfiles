@@ -7,6 +7,7 @@ alias mdcat='pandoc -f markdown -t plain'
 alias emacs='emacs -nw'
 alias ls='ls --color=auto'
 alias clean='find . -name "*~" -or -name "\#*\#" -delete'
+alias bc='bc -l ~/.bcrc'
 
 # docker
 alias docker-stop-all='docker ps -a -q | xargs docker stop'
