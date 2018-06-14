@@ -38,9 +38,6 @@
 	undo = reset --soft HEAD^
 	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 
-[credential]
-	helper = osxkeychain
-
 [branch]
         autosetuprebase = always
 
