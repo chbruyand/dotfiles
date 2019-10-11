@@ -1,56 +1,57 @@
 [user]
-	name = Charles-Henri Bruyand
+        name = Charles-Henri Bruyand
         email = chbruyand@mayhem.fr
-	signingkey = EAE1BF07
+        signingkey = EAE1BF07
 
 [color]
-	ui = true
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+        ui = true
+        branch = auto
+        diff = auto
+        interactive = auto
+        status = auto
 
 [diff]
-	# Detect copies as well as renames
-  	 renames = copies
+        # Detect copies as well as renames
+        renames = copies
+        noprefix = true
 
 [diff "bin"]
-	# Use `hexdump` to diff binary files
-	textconv = hexdump -v -C
+        # Use `hexdump` to diff binary files
+        textconv = hexdump -v -C
 
 [core]
-	editor = emacs -nw
+        editor = emacs -nw
         pager = less -x8
-	excludesfile = ~/.gitignore_global
+        excludesfile = ~/.gitignore_global
 
 [alias]
-	ci = commit
-	st = status
-	br = branch
-	co = checkout
-	df = diff
-	dc = diff --cached
-	lg = log -p
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	ls = ls-files
-	amend = commit --amend -C HEAD
-	undo = reset --soft HEAD^
-	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+        ci = commit
+        st = status
+        br = branch
+        co = checkout
+        df = diff
+        dc = diff --cached
+        lg = log -p
+        lol = log --graph --decorate --pretty=oneline --abbrev-commit
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        ls = ls-files
+        amend = commit --amend -C HEAD
+        undo = reset --soft HEAD^
+        graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 
 [branch]
         autosetuprebase = always
 
 [merge]
-	summary = true
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
+        summary = true
+        # Include summaries of merged commits in newly created merge commit messages
+        log = true
 
 [rebase]
-	autosquash = true
+        autosquash = true
 
 [commit]
-	gpgsign = true
+        gpgsign = true
 
 [hub]
-	protocol = https
+        protocol = https
