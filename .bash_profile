@@ -5,3 +5,6 @@ if test -d ~/.profile.d/; then
 	done
 	unset profile
 fi
+
+# Also load subshell settings
+test -r "${HOME}/.bashrc" && . "${HOME}/.bashrc"
